@@ -1,0 +1,2783 @@
+
+        /* Basic reset for margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Container for the two images */
+        .image-row {
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping for smaller screens */
+            justify-content: space-between;
+            gap: 20px; /* Space between the two images */
+            padding: 10px;
+        }
+
+        /* Each image column */
+        .image-col {
+            position: relative;
+            flex: 1;
+            min-width: 300px; /* Minimum width to ensure responsiveness */
+        }
+
+        /* Images will take full width of their containers */
+        .image-col img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px; /* Optional: Adds rounded corners */
+        }
+
+        /* Style for the text inside the images */
+        .image-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 1.8em;
+            font-weight: bold;
+            text-align: center;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Add shadow to text for readability */
+            padding: 10px;
+        }
+
+        /* Media queries for responsive behavior */
+        @media (max-width: 768px) {
+            .image-row {
+                flex-direction: column;
+                gap: 15px; /* Adjust space for mobile view */
+            }
+
+            .image-text {
+                font-size: 1.4em; /* Reduce font size on smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .image-text {
+                font-size: 1.2em; /* Further reduce font size for very small screens */
+            }
+        }
+  
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.threads-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.more-link {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.more-link  {
+    margin-left: 5px;
+    font-size: 16px;
+}
+
+.more-link:hover{
+    color: red;
+}
+.threads-title {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    background-image: url('icon.png'); /* replace with your actual icon URL */
+    background-size: contain;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+        /* Basic reset for margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Container for the two images */
+        .image-row {
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping for smaller screens */
+            justify-content: space-between;
+            gap: 20px; /* Space between the two images */
+            padding: 10px;
+        }
+
+        /* Each image column */
+        .image-col {
+            position: relative;
+            flex: 1;
+            min-width: 300px; /* Minimum width to ensure responsiveness */
+            text-align: center; /* Text centered below image */
+        }
+
+        /* Images will take full width of their containers */
+        .image-col img {
+            width: 90%;
+            height: auto;
+            display: block;
+            border-radius: 10px; /* Optional: Adds rounded corners */
+            margin-right: 100px;
+        }
+
+        /* Style for the text inside the images on larger screens */
+        .image-text {
+            color: white;
+            font-size: 1.8em;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* On mobile, text will appear below the image */
+        .image-text-mobile {
+            display: none;
+        }
+
+        /* Media queries for responsive behavior */
+        @media (max-width: 768px) {
+            .image-row {
+                flex-direction: column;
+                gap: 15px; /* Adjust space for mobile view */
+               
+            }
+
+            /* Hide text inside the image for mobile */
+            .image-text {
+                display: none;
+            }
+
+            /* Show text below the image on mobile */
+            .image-text-mobile {
+                display: block;
+                color: #333;
+                font-size: 1.4em;
+                padding: 10px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .image-text-mobile {
+                font-size: 1.2em; /* Further reduce font size for very small screens */
+            }
+        }
+
+    /* Basic reset for margin and padding */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Container for the four images */
+    .image-row {
+        display: flex;
+        flex-wrap: wrap; /* Wrap images if the screen is too small */
+        justify-content: space-between; /* Space between images */
+        gap: 20px; /* Space between images */
+        padding: 10px;
+    }
+
+    /* Each image block */
+    .image-col {
+        position: relative;
+        flex: 1; /* Make images equal width */
+        min-width: 200px; /* Ensure they don’t get too small */
+        text-align: center;
+    }
+
+    /* Images will take full width of their containers */
+    .image-col img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 10px; /* Optional: Adds rounded corners */
+    }
+
+    /* Style for the text inside the images */
+    .image-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 1.5em;
+        font-weight: bold;
+        text-align: center;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Add shadow to text for readability */
+        padding: 10px;
+        text-decoration: underline;
+    }
+
+
+    /* Media queries for responsive behavior */
+    @media (max-width: 768px) {
+        .image-row {
+            flex-direction: column;
+            gap: 15px; /* Adjust space for mobile view */
+        }
+
+        .image-text {
+            font-size: 1.2em; /* Reduce font size on smaller screens */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .image-text {
+            font-size: 1em; /* Further reduce font size for very small screens */
+        }
+    }
+
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.news-section {
+    width: 60%;
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.navigation {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.navigation button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.info {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.threads-section {
+    width: 35%;
+}
+
+.threads-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.thread-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.thread-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.thread-card h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.thread-card p {
+    font-size: 14px;
+    color: gray;
+}
+
+
+    .threads-section {
+    padding: 20px;
+}
+
+.threads-section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.main-thread {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.main-thread-content {
+    max-width: 70%;
+}
+
+.main-thread h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.main-thread p {
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+}
+
+.thread-image {
+    width: 25%;
+    object-fit: cover;
+    height: 100px;
+}
+
+.author-details {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.author {
+    font-size: 14px;
+    font-weight: bold;
+    color: #666;
+    margin-right: 10px;
+}
+
+.time {
+    font-size: 12px;
+    color: #999;
+}
+
+.other-threads {
+    display: flex;
+    justify-content: space-between;
+}
+
+.thread-card {
+    width: 45%;
+    padding: 10px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.thread-card h4 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.thread-card .author-details {
+    display: flex;
+    align-items: center;
+}
+
+/* Basic styles for the reviews section */
+.reviews-section {
+    padding: 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.reviews-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.reviews-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/* Review card styles */
+.review-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    width: 19%; /* For 5 cards in a row */
+     margin-top: 10px;
+}
+
+.review-card:hover {
+    color: lavender;
+}
+
+.review-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+   
+    
+}
+
+.review-card h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.author-details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.review-interactions {
+    display: flex;
+    align-items: center;
+}
+
+.review-interactions .comments {
+    font-size: 14px;
+    cursor: pointer;
+}
+/* Default styling for hr with class "blank" */
+hr.blank {
+    border: none;
+    height: 4px; /* Default height */
+    background-color: black; /* Default color */
+    margin: 20px 0;
+    width: 1815px;
+}
+
+/* Mobile responsive (for screens 768px and below) */
+@media only screen and (max-width: 768px) {
+    hr.blank {
+        height: 3px; /* Thinner line on mobile */
+        background-color: black; /* Lighter color on mobile */
+        margin: 10px 0;
+        width: 315px;
+    }
+}
+
+
+/* Responsive layout */
+@media (max-width: 1200px) {
+    .review-card {
+        width: 23%; /* 4 cards for smaller screens */
+    }
+}
+
+@media (max-width: 1024px) {
+    .review-card {
+        width: 30%; /* 3 cards for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .review-card {
+        width: 45%; /* 2 cards for tablets */
+    }
+}
+
+@media (max-width: 500px) {
+    .review-card {
+        width: 100%; /* Stack cards for small screens */
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.latest-articles h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.articles-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.main-articles {
+    flex: 3;
+}
+
+.article-item {
+    background-color: white;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.article-item img {
+    width: 100%;
+    height: auto;
+}
+
+.article-content {
+    padding: 15px;
+}
+
+.article-content .category {
+    display: inline-block;
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.article-content h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.article-content p {
+    font-size: 12px;
+    color: #777;
+}
+
+.sidebar {
+    flex: 1;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tab-menu {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.tab {
+    background-color: #e0e0e0;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 48%;
+    text-align: center;
+}
+
+.tab.active {
+   
+    color: white;
+}
+
+.sidebar-articles .sidebar-article {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.sidebar-articles .sidebar-article img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 8px;
+}
+
+.sidebar-articles p {
+    font-size: 14px;
+}
+
+.see-more-btn {
+    display: block;
+    width: 100%;
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border: none;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.tab.active {
+    background-color: lavender; /* Red background for the active tab */
+    color: black;              /* White text for the active tab */
+}
+
+/* Responsive Layout */
+
+@media (max-width: 768px) {
+    .articles-container {
+        flex-direction: column;
+    }
+
+    .main-articles, .sidebar {
+        flex: 1;
+    }
+
+    .article-content h3 {
+        font-size: 16px;
+    }
+
+    .sidebar-articles .sidebar-article img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .latest-articles h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .tab {
+        padding: 8px;
+    }
+
+    .article-content h3 {
+        font-size: 14px;
+    }
+
+    .article-content p {
+        font-size: 11px;
+    }
+
+    .see-more-btn {
+        padding: 8px;
+        color: red;
+    }
+
+    .sidebar-articles .sidebar-article img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+        /* Styling for main articles */
+        .main-articles {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .article-item {
+            display: flex;  /* Flexbox for side-by-side layout */
+            gap: 20px;      /* Space between image and text */
+            border-bottom: 1px solid #881616;
+            padding-bottom: 20px;
+        }
+
+        .article-item img {
+            width: 200px;  /* Set the width of the image */
+            height: auto;  /* Maintain aspect ratio */
+        }
+
+        .article-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;  /* Center vertically with respect to the image */
+        }
+
+        .article-content .category {
+            font-weight: bold;
+            color: #555;
+        }
+
+        .article-content h3 {
+            margin: 10px 0;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .article-content p {
+            color: #777;
+            font-size: 0.9em;
+        }
+ 
+        *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+  transition: .5s;
+  color: #fff;
+}
+
+ul ,li{
+  list-style-type:none ; 
+  display: inline;
+  
+}
+footer{
+  background-color: #292828;
+  color: #fff;
+  height: 150px;
+ margin-top: 10px;
+ height: 230px;
+}
+
+.fooder_info{
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.footer-width-about{
+  margin-right: 600px;
+}
+
+.social-media   {
+  margin-right: 400px;
+  padding: 10px;
+  
+}
+
+.footer-width-ink{
+  margin-left: 1000px;
+}
+
+.footer-content-el-footer-note-section-right{
+  margin-left: 800px;
+  padding: 20px;
+  color: #fff;
+}
+
+li:hover{
+ color: red;
+}
+@media only screen and (max-width:850px){
+  
+footer{
+  background-color: #292828;
+  color: #fff;
+  height: 150px;
+ margin-top: 10px;
+ width: 600px;
+  padding-bottom: 5px;
+  height: 100px;
+  height: 570px;
+  
+}
+.social-media  p  {
+  margin-right: 200px;
+  padding: 10px;
+}
+.fooder_info{
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.footer-width-about {
+  margin-right: 500px;
+ 
+}
+a{
+  text-decoration: none;
+  transition: .5s;
+  color: #fff;
+}
+
+ul ,li{
+  list-style-type:none ; 
+  display: block;
+  
+}
+.footer-width-ink{
+  margin-left: 10px;
+  text-align: center;
+}
+.footer-content-el-footer-note-section-right{
+  margin-left: 100px;
+  padding: 20px;
+  color: #fff;
+  display: inline;
+}
+.social-media   {
+  margin-right: 400px;
+  padding: 10px;
+  display: inline;
+  
+}
+.footer-width-about{
+  margin-right: 200px;
+}
+.footer-width-ink a img{
+  margin-right: 200px;
+}
+.footer-width-contact p{
+  margin-right: 200px;
+}
+.footer-content-el-footer-note-section-right link-brand{
+  margin-left: 200px;
+  padding: 20px;
+  color:#fff;
+}
+.bady{
+  margin-right: 200px;
+}
+}
+@media only screen and (max-width:915px) and (orientation: landscape){
+    .w-display-card-category{
+      margin-left: 100px;
+    }
+
+    footer{
+  background-color: #292828;
+  color: #fff;
+  height: 150px;
+ margin-top: 10px;
+ width: 900px;
+  padding-bottom: 5px;
+  height: 100px;
+  height: 550px;
+  
+  
+}
+ul ,li{
+  list-style-type:none ; 
+  display: block;
+  
+}
+.footer-width-ink{
+  margin-left: 10px;
+  text-align: center;
+}
+.footer-content-el-footer-note-section-right{
+  margin-left: 100px;
+  padding: 20px;
+  color: #fff;
+  display: inline;
+}
+.footer-width-ink a img{
+  margin-right: 200px;
+}
+.footer-width-contact p{
+  margin-right: 200px;
+}
+.footer-width-about  {
+  margin-left: 300px;
+  
+ 
+ 
+}
+
+
+}
+@media only screen and (max-width:786px) and (orientation: landscape){
+  footer{
+  background-color: #292828;
+  color: #fff;
+  height: 150px;
+ margin-top: 10px;
+ width: 900px;
+  padding-bottom: 5px;
+  height: 100px;
+  height: 610px;
+  
+}
+ul ,li{
+  list-style-type:none ; 
+  display: block;
+  
+}
+.footer-width-ink{
+  margin-left: 10px;
+  text-align: center;
+}
+.footer-content-el-footer-note-section-right{
+  margin-left: 100px;
+  padding: 20px;
+  color: #fff;
+  display: inline;
+}
+.footer-width-ink a img{
+  margin-right: 200px;
+}
+.footer-width-contact p{
+  margin-right: 200px;
+}
+.footer-width-about  {
+  margin-left: 50px;
+  
+ 
+ 
+}
+
+}
+        
+ 
+       * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Row styling */
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Col: Each item (image and text block) */
+.col {
+  flex: 1;
+  max-width: 22%;
+  margin: 15px 0;
+  text-align: center;
+}
+
+/* For small screens, stack the columns vertically */
+@media (max-width: 768px) {
+  .col {
+    max-width: 48%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .col {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+/* Banner text */
+.banner-text img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.banner-text h6 {
+  font-size: 14px;
+  margin: 5px 0;
+  color: #000;
+}
+
+.raj {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px 0;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.raj:hover {
+  background-color: #45a049;
+}
+
+/* Small adjustments for mobile responsiveness */
+@media (max-width: 576px) {
+  .banner-text h6 {
+    font-size: 12px;
+  }
+
+  .raj {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+
+
+        .more-link a:hover{
+            color: red;
+        }
+  
+    /* General Styles for Footer */
+.wrapper.w-footer {
+    background-color: #333; /* Dark background for the footer */
+    padding: 40px 20px;
+    color: #fff;
+    width: 6000px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-content-el {
+    flex: 1;
+    min-width: 250px; /* Adjust this for responsiveness */
+    margin-bottom: 20px;
+}
+
+/* Header and Logo */
+.el-header a.footer-img {
+    display: inline-block;
+}
+
+.el-header img {
+    max-width: 100px; /* Adjust logo size */
+}
+
+/* List and Links */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+ul li a.text {
+    color: #fff;
+    text-decoration: none;
+}
+
+ul li a.text:hover {
+    text-decoration: underline;
+}
+
+/* Social Media Icons */
+ul.social-media {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.social-elements a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+}
+
+.i-youtube {
+    background-image: url('/path/to/youtube-icon.svg');
+}
+
+.i-facebook {
+    background-image: url('/path/to/facebook-icon.svg');
+}
+
+.i-instagram {
+    background-image: url('/path/to/instagram-icon.svg');
+}
+
+.i-twitter {
+    background-image: url('/path/to/twitter-icon.svg');
+}
+
+.i-linkedin {
+    background-image: url('/path/to/linkedin-icon.svg');
+}
+
+.i-pinterest {
+    background-image: url('/path/to/pinterest-icon.svg');
+}
+
+/* Right Section */
+.section-right {
+    text-align: right;
+}
+
+.align-right {
+    text-align: right;
+}
+
+/* Footer Note */
+.footer-note {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+
+
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+
+    .footer-content-el {
+        text-align: center; /* Center-align content */
+    }
+
+    .section-right {
+        text-align: center; /* Align right section to center on mobile */
+    }
+
+    ul.social-media {
+        justify-content: center; /* Center social media icons */
+    }
+
+    ul.align-right {
+        text-align: center; /* Center align the right section links */
+    }
+
+    .footer-note {
+        text-align: center;
+        font-size: 12px; /* Smaller font for mobile */
+    }
+}
+
+
+    /* Style for the SEE MORE button */
+.see-more-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #000; /* Text color */
+    background-color: #fff; /* Button background */
+    border: 1px solid #000; /* Border style */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    text-align: center;
+    width: 600px;
+    height: 60px;
+    margin-left: 200px;
+  
+}
+
+/* Hover effect */
+
+/* Optional: Make button full width for mobile */
+@media (max-width: 768px) {
+    .see-more-btn {
+        width: 100%;
+    }
+}
+
+
+    /* Container for the card */
+.card {
+    position: relative;
+    width: 300px; /* Adjust as needed */
+    height: 200px; /* Adjust as needed */
+    overflow: hidden;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(157, 42, 42, 0.2); /* Shadow for a floating effect */
+    height: 150px;
+}
+
+/* Image style */
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire container */
+    border-radius: 8px;
+}
+
+/* Label (Gaming Console) overlay */
+.card-label {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+
+
+    .button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.see-more-button {
+    background-color: white;
+    border: 2px solid #000;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.see-more-button:hover {
+    background-color: #f1f1f1;
+    
+}
+
+
+    .button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.see-more-button {
+    background-color: transparent; /* Transparent background */
+    border: 2px solid #000; /* Solid black border */
+    color: white; /* Black text */
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.see-more-button:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Slight gray on hover */
+    
+}
+
+    .hr-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.half-hr {
+    width: 45%; /* Control the width of each HR */
+    
+}
+
+.left-hr {
+    margin-left: 7%; /* Space between the two HRs */
+}
+
+
+
+            body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .image-container {
+            position: relative; /* Establish positioning context */
+            display: inline-block; /* Keeps the container size to the image */
+        }
+        .image-container img {
+            max-width: 100%; /* Make the image responsive */
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* Ensures there are no gaps below the image */
+        }
+        .overlay-text {
+            position: absolute; /* Position text over the image */
+            top: 40%; /* Center the text vertically */
+            left: 50%; /* Center the text horizontally */
+            transform: translate(-50%, -50%); /* Adjust positioning to center */
+            color: white; /* Text color */
+            font-size: 24px; /* Text size */
+            text-align: center; /* Center the text */
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            padding: 10px; /* Padding around text */
+            border-radius:  5px; /* Rounded corners */
+        }
+
+        .image-container a{
+            margin-bottom: 100px;
+        }
+
+         .text:hover{
+color: red;
+        }
+
+    .sidebar {
+        background-color:lightgrey;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .tab {
+        flex: 1;
+        padding: 10px;
+        cursor: pointer;
+        background-color: #ddd;
+        border: none;
+        transition: background-color 0.3s;
+    }
+
+    .tab.active {
+        background-color: #bbb;
+        font-weight: bold;
+    }
+
+    .sidebar-article {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .article-image {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .see-more {
+        text-align: center;
+        font-size: 14px;
+    }
+.social-media {
+    display: flex;
+    gap: 10px; /* Space between icons */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-elements a img {
+    transition: transform 0.3s, opacity 0.3s;
+    cursor: pointer;
+}
+
+.social-elements a img:hover {
+    transform: scale(1.2); /* Slight zoom effect */
+    opacity: 0.8;
+}
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Basic reset for margin and padding */
+        /** {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Container for the two images */
+        /*.image-row {
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping for smaller screens */
+           /* justify-content: space-between;
+            gap: 20px; /* Space between the two images 
+            padding: 10px;
+        }
+
+        /* Each image column */
+        /*.image-col {
+            position: relative;
+            flex: 1;
+            min-width: 300px; /* Minimum width to ensure responsiveness 
+        }
+
+        /* Images will take full width of their containers */
+       /* .image-col img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px; /* Optional: Adds rounded corners 
+        }
+
+        /* Style for the text inside the images */
+        /*.image-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 1.8em;
+            font-weight: bold;
+            text-align: center;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Add shadow to text for readability 
+            padding: 10px;
+        }
+
+        /* Media queries for responsive behavior */
+        /*@media (max-width: 768px) {
+            .image-row {
+                flex-direction: column;
+                gap: 15px; /* Adjust space for mobile view 
+            }
+
+            .image-text {
+                font-size: 1.4em; /* Reduce font size on smaller screens 
+            }
+        }
+
+        @media (max-width: 480px) {
+            .image-text {
+                font-size: 1.2em; /* Further reduce font size for very small screens 
+            }
+        }
+body {
+    font-family: Arial, sans-serif;
+}
+
+.threads-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.more-link {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.more-link .arrow {
+    margin-left: 5px;
+    color: red;
+    font-size: 16px;
+}
+
+.threads-title {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    background-image: url('icon.png'); /* replace with your actual icon URL */
+    /*background-size: contain;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+ /* Container for the two images */
+       /* .image-row {
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping for smaller screens */
+           /* justify-content: space-between;
+            gap: 20px; /* Space between the two images 
+            padding: 10px;
+        }
+
+        /* Each image column */
+        /*.image-col {
+            position: relative;
+            flex: 1;
+            min-width: 300px; /* Minimum width to ensure responsiveness 
+            text-align: center; /* Text centered below image 
+        }
+
+        /* Images will take full width of their containers */
+       /* .image-col img {
+            width: 90%;
+            height: auto;
+            display: block;
+            border-radius: 10px; /* Optional: Adds rounded corners 
+            margin-right: 100px;
+        }
+
+        /* Style for the text inside the images on larger screens */
+        /*.image-text {
+            color: white;
+            font-size: 1.8em;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* On mobile, text will appear below the image */
+        /*.image-text-mobile {
+            display: none;
+        }
+
+        /* Media queries for responsive behavior */
+       /* @media (max-width: 768px) {
+            .image-row {
+                flex-direction: column;
+                gap: 15px; /* Adjust space for mobile view 
+               
+            }
+
+            /* Hide text inside the image for mobile */
+          /*  .image-text {
+                display: none;
+            }
+
+            /* Show text below the image on mobile */
+            /*.image-text-mobile {
+                display: block;
+                color: #333;
+                font-size: 1.4em;
+                padding: 10px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .image-text-mobile {
+                font-size: 1.2em; /* Further reduce font size for very small screens 
+            }
+        }
+
+
+ /* Container for the four images */
+    /*.image-row {
+        display: flex;
+        flex-wrap: wrap; /* Wrap images if the screen is too small *
+        justify-content: space-between; /* Space between images *
+        gap: 20px; /* Space between images 
+        padding: 10px;
+    }
+
+    /* Each image block */
+   /* .image-col {
+        position: relative;
+        flex: 1; /* Make images equal width 
+        min-width: 200px; /* Ensure they don’t get too small 
+        text-align: center;
+    }
+
+    /* Images will take full width of their containers */
+   /* .image-col img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 10px; /* Optional: Adds rounded corners *
+    }
+
+    /* Style for the text inside the images */
+    /*.image-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 1.5em;
+        font-weight: bold;
+        text-align: center;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Add shadow to text for readability *
+        padding: 10px;
+    }
+
+    /* Media queries for responsive behavior */
+   /* @media (max-width: 768px) {
+        .image-row {
+            flex-direction: column;
+            gap: 15px; /* Adjust space for mobile view *
+        }
+
+        .image-text {
+            font-size: 1.2em; /* Reduce font size on smaller screens *
+        }
+    }
+
+    @media (max-width: 480px) {
+        .image-text {
+            font-size: 1em; /* Further reduce font size for very small screens *
+        }
+    }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.news-section {
+    width: 60%;
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.navigation {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.navigation button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.info {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.threads-section {
+    width: 35%;
+}
+
+.threads-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.thread-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.thread-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.thread-card h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.thread-card p {
+    font-size: 14px;
+    color: gray;
+}
+
+
+ .threads-section {
+    padding: 20px;
+}
+
+.threads-section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.main-thread {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.main-thread-content {
+    max-width: 70%;
+}
+
+.main-thread h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.main-thread p {
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+}
+
+.thread-image {
+    width: 25%;
+    object-fit: cover;
+    height: 100px;
+}
+
+.author-details {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.author {
+    font-size: 14px;
+    font-weight: bold;
+    color: #666;
+    margin-right: 10px;
+}
+
+.time {
+    font-size: 12px;
+    color: #999;
+}
+
+.other-threads {
+    display: flex;
+    justify-content: space-between;
+}
+
+.thread-card {
+    width: 45%;
+    padding: 10px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.thread-card h4 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.thread-card .author-details {
+    display: flex;
+    align-items: center;
+}
+
+/* Basic styles for the reviews section */
+/*.reviews-section {
+    padding: 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.reviews-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.reviews-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/* Review card styles */
+/*.review-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    width: 19%; /* For 5 cards in a row 
+     margin-top: 10px;
+}
+
+.review-card:hover {
+    color: lavender;
+}
+
+.review-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+   
+    
+}
+
+.review-card h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.author-details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.review-interactions {
+    display: flex;
+    align-items: center;
+}
+
+.review-interactions .comments {
+    font-size: 14px;
+    cursor: pointer;
+}
+/* Default styling for hr with class "blank" */
+/*hr.blank {
+    border: none;
+    height: 4px; /* Default height 
+    background-color: black; /* Default color 
+    margin: 20px 0;
+    width: 1815px;
+}
+
+/* Mobile responsive (for screens 768px and below) */
+/*@media only screen and (max-width: 768px) {
+    hr.blank {
+        height: 3px; /* Thinner line on mobile *
+        background-color: black; /* Lighter color on mobile *
+        margin: 10px 0;
+        width: 315px;
+    }
+}
+
+
+/* Responsive layout */
+/*@media (max-width: 1200px) {
+    .review-card {
+        width: 23%; /* 4 cards for smaller screens 
+    }
+}
+
+@media (max-width: 1024px) {
+    .review-card {
+        width: 30%; /* 3 cards for medium screens *
+    }
+}
+
+@media (max-width: 768px) {
+    .review-card {
+        width: 45%; /* 2 cards for tablets *
+    }
+}
+
+@media (max-width: 500px) {
+    .review-card {
+        width: 100%; /* Stack cards for small screens *
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.latest-articles h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.articles-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.main-articles {
+    flex: 3;
+}
+
+.article-item {
+    background-color: white;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.article-item img {
+    width: 100%;
+    height: auto;
+}
+
+.article-content {
+    padding: 15px;
+}
+
+.article-content .category {
+    display: inline-block;
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.article-content h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.article-content p {
+    font-size: 12px;
+    color: #777;
+}
+
+.sidebar {
+    flex: 1;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tab-menu {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.tab {
+    background-color: #e0e0e0;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 48%;
+    text-align: center;
+}
+
+.tab.active {
+    background-color: #ff4c4c;
+    color: white;
+}
+
+.sidebar-articles .sidebar-article {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.sidebar-articles .sidebar-article img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 8px;
+}
+
+.sidebar-articles p {
+    font-size: 14px;
+}
+
+.see-more-btn {
+    display: block;
+    width: 100%;
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border: none;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.tab.active {
+    background-color: lavender; /* Red background for the active tab *
+    color: black;              /* White text for the active tab *
+}
+
+/* Responsive Layout */
+
+/*@media (max-width: 768px) {
+    .articles-container {
+        flex-direction: column;
+    }
+
+    .main-articles, .sidebar {
+        flex: 1;
+    }
+
+    .article-content h3 {
+        font-size: 16px;
+    }
+
+    .sidebar-articles .sidebar-article img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .latest-articles h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .tab {
+        padding: 8px;
+    }
+
+    .article-content h3 {
+        font-size: 14px;
+    }
+
+    .article-content p {
+        font-size: 11px;
+    }
+
+    .see-more-btn {
+        padding: 8px;
+        color: red;
+    }
+
+    .sidebar-articles .sidebar-article img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* Styling for main articles */
+        /*.main-articles {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .article-item {
+            display: flex;  /* Flexbox for side-by-side layout *
+            gap: 20px;      /* Space between image and text *
+            border-bottom: 1px solid #881616;
+            padding-bottom: 20px;
+        }
+
+        .article-item img {
+            width: 200px;  /* Set the width of the image *
+            height: auto;  /* Maintain aspect ratio *
+        }
+
+        .article-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;  /* Center vertically with respect to the image *
+        }
+
+        .article-content .category {
+            font-weight: bold;
+            color: #555;
+        }
+
+        .article-content h3 {
+            margin: 10px 0;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .article-content p {
+            color: #777;
+            font-size: 0.9em;
+        }
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+  transition: .5s;
+  color: #fff;
+}
+
+ul ,li{
+  list-style-type:none ; 
+  display: inline;
+  
+}
+footer{
+  background-color: #292828;
+  color: #fff;
+  height: 150px;
+ margin-top: 10px;
+ height: 230px;
+}
+
+.fooder_info{
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.footer-width-about{
+  margin-right: 600px;
+}
+
+.social-media   {
+  margin-right: 400px;
+  padding: 10px;
+  
+}
+
+.footer-width-ink{
+  margin-left: 1000px;
+}
+
+.footer-content-el-footer-note-section-right{
+  margin-left: 800px;
+  padding: 20px;
+  color: #fff;
+}
+
+li:hover{
+ color: red;
+}
+@media only screen and (max-width:850px){
+  
+footer{
+  background-color: #292828;
+  color: #fff;
+  height: 150px;
+ margin-top: 10px;
+ width: 600px;
+  padding-bottom: 5px;
+  height: 100px;
+  height: 570px;
+  
+}
+.social-media  p  {
+  margin-right: 200px;
+  padding: 10px;
+}
+.fooder_info{
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.footer-width-about {
+  margin-right: 500px;
+ 
+}
+a{
+  text-decoration: none;
+  transition: .5s;
+  color: #fff;
+}
+
+ul ,li{
+  list-style-type:none ; 
+  display: block;
+  
+}
+.footer-width-ink{
+  margin-left: 10px;
+  text-align: center;
+}
+.footer-content-el-footer-note-section-right{
+  margin-left: 100px;
+  padding: 20px;
+  color: #fff;
+  display: inline;
+}
+.social-media   {
+  margin-right: 400px;
+  padding: 10px;
+  display: inline;
+  
+}
+.footer-width-about{
+  margin-right: 200px;
+}
+.footer-width-ink a img{
+  margin-right: 200px;
+}
+.footer-width-contact p{
+  margin-right: 200px;
+}
+.footer-content-el-footer-note-section-right link-brand{
+  margin-left: 200px;
+  padding: 20px;
+  color:#fff;
+}
+.bady{
+  margin-right: 200px;
+}
+}
+@media only screen and (max-width:915px) and (orientation: landscape){
+    .w-display-card-category{
+      margin-left: 100px;
+    }
+
+    footer{
+  background-color: #292828;
+  color: #fff;
+  height: 150px;
+ margin-top: 10px;
+ width: 900px;
+  padding-bottom: 5px;
+  height: 100px;
+  height: 550px;
+  
+}
+ul ,li{
+  list-style-type:none ; 
+  display: block;
+  
+}
+.footer-width-ink{
+  margin-left: 10px;
+  text-align: center;
+}
+.footer-content-el-footer-note-section-right{
+  margin-left: 100px;
+  padding: 20px;
+  color: #fff;
+  display: inline;
+}
+.footer-width-ink a img{
+  margin-right: 200px;
+}
+.footer-width-contact p{
+  margin-right: 200px;
+}
+.footer-width-about  {
+  margin-left: 300px;
+  
+ 
+ 
+}
+
+
+}
+@media only screen and (max-width:786px) and (orientation: landscape){
+  footer{
+  background-color: #292828;
+  color: #fff;
+  height: 150px;
+ margin-top: 10px;
+ width: 900px;
+  padding-bottom: 5px;
+  height: 100px;
+  height: 610px;
+  
+}
+ul ,li{
+  list-style-type:none ; 
+  display: block;
+  
+}
+.footer-width-ink{
+  margin-left: 10px;
+  text-align: center;
+}
+.footer-content-el-footer-note-section-right{
+  margin-left: 100px;
+  padding: 20px;
+  color: #fff;
+  display: inline;
+}
+.footer-width-ink a img{
+  margin-right: 200px;
+}
+.footer-width-contact p{
+  margin-right: 200px;
+}
+.footer-width-about  {
+  margin-left: 50px;
+  
+ 
+ 
+}
+
+}
+
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Row styling */
+/*.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Col: Each item (image and text block) */
+/*.col {
+  flex: 1;
+  max-width: 22%;
+  margin: 15px 0;
+  text-align: center;
+}
+
+/* For small screens, stack the columns vertically */
+/*@media (max-width: 768px) {
+  .col {
+    max-width: 48%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .col {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+/* Banner text */
+/*.banner-text img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.banner-text h6 {
+  font-size: 14px;
+  margin: 5px 0;
+  color: #000;
+}
+
+.raj {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px 0;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.raj:hover {
+  background-color: #45a049;
+}
+
+/* Small adjustments for mobile responsiveness */
+/*@media (max-width: 576px) {
+  .banner-text h6 {
+    font-size: 12px;
+  }
+
+  .raj {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Add a subtle box-shadow to the images */
+/*.image-container img {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+    
+}
+
+/* Change the background color and font size for titles */
+/*.image-container h1 {
+    background-color: #f8f9fa;
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 5px;
+   
+    
+}
+
+/* Add a hover effect to images */
+/*.image-container img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  
+}
+
+.image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Add some padding between images on larger screens */
+        /*.image-container .col-md-6 {
+            padding-bottom: 20px;
+        }
+
+        /* Optional: Center the titles */
+        /*.image-container h1 {
+            text-align: center;
+            
+        }
+        bc-listing-categories
+        
+     /* Base styles for the category link */
+/*.bc-listing-categories {
+    display: inline-block;
+    margin: 10px;
+}*/
+
+/*.bc-listing-categories-link {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #0073e6; /* Light blue background */
+   /* color: white;
+   /* border-radius: 5px;
+    /*transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect 
+}
+
+/*.bc-listing-categories-link:hover {
+    background-color: #005bb5; /* Darker blue on hover */
+    /*color: #ffffff;
+}
+
+.bc-listing-categories-link.light {
+    background-color: #f0f0f0; /* Light background for light class */
+    /*color: #333333;
+}*/
+
+/*.bc-listing-categories-link.light:hover {
+    background-color: #e0e0e0; /* Slightly darker on hover *
+}
+
+/*.bc-listing-categories-link.reverse {
+    background-color: #333333; /* Dark background for reverse class */
+   /* color: #ffffff;
+}
+
+/*.bc-listing-categories-link.reverse:hover {
+    /*background-color: #111111; /* Darker on hover *
+}
+
